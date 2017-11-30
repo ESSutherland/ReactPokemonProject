@@ -1,0 +1,302 @@
+.Main{
+  border: solid black 5px;
+  font-family: Arial Black, sans-serif;
+}
+.PokemonImage{
+  background-image: url("../images/scene.png");
+  position: relative;
+  display: table-cell;
+  height: 200px;
+  width: 200px;
+  border: black 2px solid;
+  vertical-align: bottom;
+  left: 50px;
+}
+.Header{
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial Black, sans-serif;
+  color: white;
+  text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
+  background-color: #b5461b;
+  padding: 25px;
+  font-size: 3em;
+  border-bottom: solid 5px black;
+}
+#data{
+  text-align: center;
+  width: 300px;
+  height: 320px;
+  margin: 50px;
+  background-color: lightgray;
+}
+#information{
+  width: 212px;
+  display: block;
+  position: relative;
+  right: -1600px;
+  bottom: 400px;
+  background-color: #b5461b;
+}
+#information th, td {
+    border: 1px solid black;
+}
+#information td{
+  background-color: #e27266;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+}
+#pokemonId{
+border-top-right-radius: 25%;
+border-bottom-right-radius: 25%;
+border-right: solid black 3px;
+float: left;
+background-color: #b5461b;
+padding-left: 5px;
+padding-right: 8px;
+margin-right: 10px;
+height: 100%;
+}
+#pokemonInfo{
+  background-color: #e27266;
+  font-weight: bold;
+  font-family: Arial Black, sans-serif;
+  margin-bottom: 15px;
+  height: 25px;
+}
+#typing{
+  background-color: #b5461b;
+  font-size: .8em;
+  height: 30px;
+  text-align: center;
+}
+#forms{
+  margin-left: 10px;
+}
+#abilities{
+  text-align: left;
+  width: 100%;
+  background-color: lightgray;
+}
+#abilities p{
+  border-bottom: solid 1px gray;
+  list-style-type: none;
+  padding: 5px;
+}
+.AbilityName{
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.AbilityDesc{
+  font-size: .9em;
+  font-style: italic;
+}
+.DataTitle{
+  text-align: center;
+  margin-top: 15px;
+  background-color: #b5461b;
+  width: 100%;
+}
+.Hidden{
+  margin-left: 5px;
+  font-size: .7em;
+  font-style: italic;
+  color: gray;
+}
+.Selection{
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  border-bottom: solid black 2px;
+}
+.BigCircle{
+  position: absolute;
+    background: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    left: 50%
+}
+.SmallCircle{
+  position: absolute;
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    top: 50%;
+   left: 50%;
+   margin: -20px 0px 0px -20px;
+}
+footer{
+  text-align: center;
+}
+.Grass{
+  border-radius: 40%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  border: solid white 2px;
+  background-color: #058226;
+  padding: 5px;
+  margin-left: 3px;
+}
+.Poison{
+  border-radius: 40%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  border: solid white 2px;
+  background-color: #8b43a5;
+  padding: 5px;
+  margin-left: 3px;
+}
+.Fire{
+  border-radius: 40%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  border: solid white 2px;
+  background-color: #e08d3a;
+  padding: 5px;
+  margin-left: 3px;
+}
+.Flying{
+  border-radius: 40%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  border: solid white 2px;
+  background-color: #9fc1ce;
+  padding: 5px;
+  margin-left: 3px;
+}
+.Water{
+  border-radius: 40%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  border: solid white 2px;
+  background-color: #0074D9;
+  padding: 5px;
+  margin-left: 3px;
+}
+.Dragon{
+  border-radius: 40%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  border: solid white 2px;
+  background-color: #60177a;
+  padding: 5px;
+  margin-left: 3px;
+}
+.Bug{
+  border-radius: 40%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  border: solid white 2px;
+  background-color: #578232;
+  padding: 5px;
+  margin-left: 3px;
+}
+.Normal{
+  border-radius: 40%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  border: solid white 2px;
+  background-color: #b2b2b2;
+  padding: 5px;
+  margin-left: 3px;
+}
+.Dark{
+  border-radius: 40%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  border: solid white 2px;
+  background-color: #2d2d2d;
+  padding: 5px;
+  margin-left: 3px;
+}
+.Electric{
+  border-radius: 40%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  border: solid white 2px;
+  background-color: #d9ed44;
+  padding: 5px;
+  margin-left: 3px;
+}
+.Psychic{
+  border-radius: 40%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  border: solid white 2px;
+  background-color: #e77bed;
+  padding: 5px;
+  margin-left: 3px;
+}
+.Ground{
+  border-radius: 40%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  border: solid white 2px;
+  background-color: #875c08;
+  padding: 5px;
+  margin-left: 3px;
+}
+.Ice{
+  border-radius: 40%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  border: solid white 2px;
+  background-color: #7adee8;
+  padding: 5px;
+  margin-left: 3px;
+}
+.Steel{
+  border-radius: 40%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  border: solid white 2px;
+  background-color: #969696;
+  padding: 5px;
+  margin-left: 3px;
+}
+.Fighting{
+  border-radius: 40%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  border: solid white 2px;
+  background-color: #8c3804;
+  padding: 5px;
+  margin-left: 3px;
+}
+.Rock{
+  border-radius: 40%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  border: solid white 2px;
+  background-color: #7f5c2c;
+  padding: 5px;
+  margin-left: 3px;
+}
+.Ghost{
+  border-radius: 40%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  border: solid white 2px;
+  background-color: #3e2563;
+  padding: 5px;
+  margin-left: 3px;
+}
+.Fairy{
+  border-radius: 40%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  border: solid white 2px;
+  background-color: #fca9db;
+  padding: 5px;
+  margin-left: 3px;
+}
