@@ -1,5 +1,16 @@
+#root{
+  margin: auto auto;
+  position: absolute;
+  left: 3.5%;
+  background-color: white;
+  padding: 30px;
+  height: 150%;
+  width: 90%;
+}
+body{
+  background-color: #e27266;
+}
 .Main{
-  border: solid black 5px;
   font-family: Arial Black, sans-serif;
 }
 .PokemonImage{
@@ -13,7 +24,11 @@
   left: 50px;
 }
 .Header{
-  display: block;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
   text-align: center;
   font-weight: bold;
   font-family: Arial Black, sans-serif;
@@ -24,35 +39,44 @@
   font-size: 3em;
   border-bottom: solid 5px black;
 }
-#data{
+#pokemonData{
+  position: absolute;
+  top: 18%;
   text-align: center;
   width: 300px;
   height: 320px;
-  margin: 50px;
-  background-color: lightgray;
+  background-color: #adadad;
 }
 #information{
-  width: 212px;
-  display: block;
-  position: relative;
-  right: -1600px;
-  bottom: 400px;
+  width: 50px;
+  position: absolute;
+  top: 18%;
+  left: 85%;
   background-color: #b5461b;
+  border: none;
 }
 #information th, td {
     border: 1px solid black;
+    border: none;
+    padding: 5px;
 }
 #information td{
-  background-color: #e27266;
+  background-color: #adadad;
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
 }
+#stats{
+  position: absolute;
+  left: 55%;
+  top: 18%;
+  background-color: #adadad;
+}
 #pokemonId{
-border-top-right-radius: 25%;
-border-bottom-right-radius: 25%;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
 border-right: solid black 3px;
 float: left;
 background-color: #b5461b;
@@ -78,14 +102,64 @@ height: 100%;
   margin-left: 10px;
 }
 #abilities{
+  position: absolute;
+  margin-top: 15px;
   text-align: left;
-  width: 100%;
-  background-color: lightgray;
+  width: 300px;
+  background-color: #adadad;
+  top: 40%;
 }
 #abilities p{
   border-bottom: solid 1px gray;
   list-style-type: none;
   padding: 5px;
+}
+#evolution{
+  background-color: #adadad;
+  position: absolute;
+  top: 60%;
+  left: 40%;
+}
+#home{
+  position: absolute;
+  top: 20%;
+  left: 25%
+}
+.EvoImage img{
+  margin: 15px;
+  float: left;
+}
+.EvoImage table{
+  text-align: center;
+}
+.EvoMethod{
+  margin: 15px;
+  float: left;
+}
+p.StatDiv{
+  text-align: center;
+}
+.StatDiv{
+  width: 450px;
+  border-bottom: solid 1px gray;
+  font-size: .8em;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.StatBackgroud{
+  float: right;
+  vertical-align: bottom;
+  display: inline-block;
+  height: 10px;
+  width: 300px;
+  background-color: white;
+  margin-left: 10px;
+}
+.Stat{
+  width: 1%;
+  height: 100%;
+  background-color: #b5461b;
 }
 .AbilityName{
   font-size: 1.1em;
@@ -97,7 +171,6 @@ height: 100%;
 }
 .DataTitle{
   text-align: center;
-  margin-top: 15px;
   background-color: #b5461b;
   width: 100%;
 }
@@ -108,10 +181,24 @@ height: 100%;
   color: gray;
 }
 .Selection{
+  position: relative;
+  left: 0px;
+  top: 100px;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 50px;
   padding-bottom: 15px;
   border-bottom: solid black 2px;
+  background-color: white;
+}
+.Selection select{
+  margin-right: 10px;
+  display: inline;
+  background: white;
+   border: solid black 1px;
+   border-radius: 20px;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px;
 }
 .BigCircle{
   position: absolute;
@@ -119,9 +206,9 @@ height: 100%;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    text-align: center;
+    align-self: center;
     vertical-align: middle;
-    left: 50%
+    left: 48%
 }
 .SmallCircle{
   position: absolute;
@@ -136,10 +223,19 @@ height: 100%;
    margin: -20px 0px 0px -20px;
 }
 footer{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  position: absolute;
+  bottom: -60%;
+  left: 0px;
   text-align: center;
+  background-color: #b5461b;
+  border-top: solid black 2px;
+  font-weight: bold;
 }
 .Grass{
-  border-radius: 40%;
+  border-radius: 20px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
   border: solid white 2px;
@@ -148,7 +244,7 @@ footer{
   margin-left: 3px;
 }
 .Poison{
-  border-radius: 40%;
+  border-radius: 20px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
   border: solid white 2px;
@@ -157,7 +253,7 @@ footer{
   margin-left: 3px;
 }
 .Fire{
-  border-radius: 40%;
+  border-radius: 20px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
   border: solid white 2px;
@@ -166,7 +262,7 @@ footer{
   margin-left: 3px;
 }
 .Flying{
-  border-radius: 40%;
+  border-radius: 20px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
   border: solid white 2px;
@@ -175,7 +271,7 @@ footer{
   margin-left: 3px;
 }
 .Water{
-  border-radius: 40%;
+  border-radius: 20px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
   border: solid white 2px;
@@ -184,7 +280,7 @@ footer{
   margin-left: 3px;
 }
 .Dragon{
-  border-radius: 40%;
+  border-radius: 20px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
   border: solid white 2px;
@@ -193,7 +289,7 @@ footer{
   margin-left: 3px;
 }
 .Bug{
-  border-radius: 40%;
+  border-radius: 20px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
   border: solid white 2px;
@@ -202,7 +298,7 @@ footer{
   margin-left: 3px;
 }
 .Normal{
-  border-radius: 40%;
+  border-radius: 20px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
   border: solid white 2px;
@@ -211,7 +307,7 @@ footer{
   margin-left: 3px;
 }
 .Dark{
-  border-radius: 40%;
+  border-radius: 20px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
   border: solid white 2px;
@@ -220,7 +316,7 @@ footer{
   margin-left: 3px;
 }
 .Electric{
-  border-radius: 40%;
+  border-radius: 20px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
   border: solid white 2px;
@@ -229,7 +325,7 @@ footer{
   margin-left: 3px;
 }
 .Psychic{
-  border-radius: 40%;
+  border-radius: 20px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
   border: solid white 2px;
@@ -238,7 +334,7 @@ footer{
   margin-left: 3px;
 }
 .Ground{
-  border-radius: 40%;
+  border-radius: 20px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
   border: solid white 2px;
@@ -247,7 +343,7 @@ footer{
   margin-left: 3px;
 }
 .Ice{
-  border-radius: 40%;
+  border-radius: 20px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
   border: solid white 2px;
@@ -256,7 +352,7 @@ footer{
   margin-left: 3px;
 }
 .Steel{
-  border-radius: 40%;
+  border-radius: 20px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
   border: solid white 2px;
@@ -265,7 +361,7 @@ footer{
   margin-left: 3px;
 }
 .Fighting{
-  border-radius: 40%;
+  border-radius: 20px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
   border: solid white 2px;
@@ -274,7 +370,7 @@ footer{
   margin-left: 3px;
 }
 .Rock{
-  border-radius: 40%;
+  border-radius: 20px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
   border: solid white 2px;
@@ -283,7 +379,7 @@ footer{
   margin-left: 3px;
 }
 .Ghost{
-  border-radius: 40%;
+  border-radius: 20px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
   border: solid white 2px;
@@ -292,7 +388,7 @@ footer{
   margin-left: 3px;
 }
 .Fairy{
-  border-radius: 40%;
+  border-radius: 20px;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
   border: solid white 2px;

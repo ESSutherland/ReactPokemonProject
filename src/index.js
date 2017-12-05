@@ -2,8 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Types from './data/types.json';
 import {generation1Data} from './data/exportData.js';
+import {generation1Images} from './images/exportImages.js';
 import {TypeChart} from './components/TypeChart.js';
-import "./styles/index.css";
+import {StatGraph} from './components/StatGraph.js';
+import {Abilities} from './components/Abilities.js';
+import {EvolutionLine} from './components/EvolutionLine.js';
+require("./styles/index.css")
 
 class Pokemon extends React.Component{
   constructor(){
@@ -17,6 +21,7 @@ class Pokemon extends React.Component{
     },
     showData: false,
     currentImage: "",
+    totalStats: 0
   }
 }
 
@@ -28,12 +33,11 @@ class Pokemon extends React.Component{
     }
     if(val > 0){
       if(id === "generation1"){
-        //var pokemon = Gen1Data[val - 1];
-      //  var pokemonInfo = Gen1Info[val - 1];
       var pokemon = generation1Data[val - 1].pokemon;
+      var image = generation1Images[val - 1].normal;
       this.setState({pokemon: pokemon});
       }
-      this.changeData(pokemon.pokemon_image, pokemon);
+      this.changeData(image, pokemon);
     }
     else{
       this.setState({showData: false})
@@ -49,40 +53,45 @@ class Pokemon extends React.Component{
   }
 
   changeData(image, data){
-    this.setState({currentData: data, currentImage: image, showData: true});
+    var totalStats = 0;
+    for(var i  = 0; i < data.pokemon_stats.length; i++){
+        totalStats += parseInt(data.pokemon_stats[i].value);
+    }
+    this.setState({currentData: data, currentImage: image, showData: true, totalStats: totalStats});
   }
 
   handleFormChange(e){
     var val = e.target.value;
+    var id = parseInt(this.state.pokemon.pokemon_id);
     if(val === "normal"){
-      this.changeData(this.state.pokemon.pokemon_image, this.state.pokemon);
+      this.changeData(generation1Images[id - 1].normal, this.state.pokemon);
     }
     if(val === "shiny"){
-      this.changeData(this.state.pokemon.pokemon_shiny, this.state.pokemon);
+      this.changeData(generation1Images[id - 1].shiny, this.state.pokemon);
     }
     if(val === "female1"){
-      this.changeData(this.state.pokemon.pokemon_female[0].image, this.state.pokemon);
+      this.changeData(generation1Images[id - 1].female, this.state.pokemon);
     }
     if(val === "female2"){
-      this.changeData(this.state.pokemon.pokemon_female[1].image, this.state.pokemon);
+      this.changeData(generation1Images[id - 1].female_shiny, this.state.pokemon);
     }
     if(val === "mega1"){
-      this.changeData(this.state.pokemon.pokemon_megas[0].pokemon_image, this.state.pokemon.pokemon_megas[0]);
+      this.changeData(generation1Images[id - 1].shiny, this.state.pokemon.pokemon_megas[0]);
     }
     if(val === "mega2"){
-      this.changeData(this.state.pokemon.pokemon_megas[0].pokemon_shiny, this.state.pokemon.pokemon_megas[0]);
+      this.changeData(generation1Images[id - 1].shiny, this.state.pokemon.pokemon_megas[0]);
     }
     if(val === "mega3"){
-      this.changeData(this.state.pokemon.pokemon_megas[1].pokemon_image, this.state.pokemon.pokemon_megas[1]);
+      this.changeData(generation1Images[id - 1].shiny, this.state.pokemon.pokemon_megas[1]);
     }
     if(val === "mega4"){
-      this.changeData(this.state.pokemon.pokemon_megas[1].pokemon_shiny, this.state.pokemon.pokemon_megas[1]);
+      this.changeData(generation1Images[id - 1].shiny, this.state.pokemon.pokemon_megas[1]);
     }
     if(val === "alolan1"){
-      this.changeData(this.state.pokemon.pokemon_alolan[0].pokemon_image, this.state.pokemon.pokemon_alolan[0]);
+      this.changeData(generation1Images[id - 1].shiny, this.state.pokemon.pokemon_alolan[0]);
     }
     if(val === "alolan2"){
-      this.changeData(this.state.pokemon.pokemon_alolan[0].pokemon_shiny, this.state.pokemon.pokemon_alolan[0]);
+      this.changeData(generation1Images[id - 1].shiny, this.state.pokemon.pokemon_alolan[0]);
     }
   }
   createFormSelect(pokemon){
@@ -140,7 +149,7 @@ class Pokemon extends React.Component{
   listTyping(types){
     const typeList = types.map(function(type){
       if(type.type != ""){
-        return <span class={type.type}>{type.type}</span>
+        return <span className={type.type}>{type.type}</span>
       }
       else{
         return null;
@@ -148,46 +157,32 @@ class Pokemon extends React.Component{
     });
     return typeList;
   }
-  listAbilities(data){
-    const abilityList = data.pokemon_abilities.map(function(ability, index){
-      if(ability.ability !== ""){
-        return <p><span class="AbilityName">{ability.ability}</span> - <span class="AbilityDesc">{ability.desc}</span></p>
-      }
-      if(index + 1 === data.pokemon_abilities.length && data.pokemon_hidden_ability !== ""){
-        return <p><span class="AbilityName">{data.pokemon_hidden_ability}</span><span class="Hidden">(hidden)</span> - <span class="AbilityDesc">{data.pokemon_hidden_ability_desc}</span></p>
-      }
-      else{
-        return null;
-      }
-    });
-    return abilityList;
-  }
-
   render(){
     return(
-      <div class="Main">
-      <div class="Header">
-      POKEMON DATABASE
-      <div class="BigCircle">
-        <div class="SmallCircle"></div>
-      </div>
-      </div>
-        <div class="Selection">
+      <div className="Main">
+        <div className="Selection">
         <select id="generation1" onChange={this.handlePokemonChange.bind(this)}>
           <option value="0">-Generation 1-</option>
           {this.fillPokemonSelect(generation1Data)}
         </select>
+        <select id="generation2">
+          <option value="0">-Generation 2-</option>
+        </select>
+        <select id="generation3">
+          <option value="0">-Generation 3-</option>
+        </select>
         </div>
         { this.state.showData ?
         <div id="data">
+          <div id="pokemonData">
           <div id="pokemonInfo">
             <span id="pokemonId">
               Pokedex No: {this.state.pokemon.pokemon_id}
             </span>
             {this.state.pokemon.pokemon_name}
           </div>
-          <div class="PokemonImage">
-            <img src={require(`${this.state.currentImage}`)}/>
+          <div className="PokemonImage">
+            <img src={this.state.currentImage}/>
           </div>
           <div id="typing">
             <p>
@@ -198,15 +193,25 @@ class Pokemon extends React.Component{
           Forms:
           {this.createFormSelect(this.state.pokemon)}
           </div>
-          <div id="abilities">
-          <div class="DataTitle">Abilities:</div>
-            {this.listAbilities(this.state.currentData)}
           </div>
-        </div>
-         : null }
-         {this.state.showData ?
+          <Abilities data={this.state.currentData}/>
+          <div id="stats">
+          <div className="DataTitle">Base Stats:</div>
+          <StatGraph stat={this.state.currentData.pokemon_stats[0].stat} value={this.state.currentData.pokemon_stats[0].value} total={this.state.totalStats}/>
+          <StatGraph stat={this.state.currentData.pokemon_stats[1].stat} value={this.state.currentData.pokemon_stats[1].value} total={this.state.totalStats}/>
+          <StatGraph stat={this.state.currentData.pokemon_stats[2].stat} value={this.state.currentData.pokemon_stats[2].value} total={this.state.totalStats}/>
+          <StatGraph stat={this.state.currentData.pokemon_stats[3].stat} value={this.state.currentData.pokemon_stats[3].value} total={this.state.totalStats}/>
+          <StatGraph stat={this.state.currentData.pokemon_stats[4].stat} value={this.state.currentData.pokemon_stats[4].value} total={this.state.totalStats}/>
+          <StatGraph stat={this.state.currentData.pokemon_stats[5].stat} value={this.state.currentData.pokemon_stats[5].value} total={this.state.totalStats}/>
+          <p className="StatDiv">Total: {this.state.totalStats}</p>
+          </div>
           <TypeChart state={this.state}/>
-         : null}
+          <EvolutionLine data={this.state.currentData}/>
+        </div>
+         :
+        <div id="home">
+          Choose a pokemon from the drop-downs above to view information about that pokemon.
+        </div>}
       </div>
     );
   }
