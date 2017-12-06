@@ -1,0 +1,20 @@
+{
+  "name": "pokemon-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-scripts": "1.0.17"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "homepage": "http://essutherland.com/pokemon",
+  "devDependencies": {
+    "css-loader": "^0.28.7"
+  }
+}
