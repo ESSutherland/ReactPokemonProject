@@ -43,12 +43,12 @@ body{
   position: absolute;
   top: 18%;
   text-align: center;
-  width: 300px;
-  height: 320px;
+  width: 17%;
+  height: 22%;
   background-color: #adadad;
 }
 #information{
-  width: 50px;
+  width: 10%;
   position: absolute;
   top: 18%;
   left: 85%;
@@ -73,6 +73,7 @@ body{
   left: 55%;
   top: 18%;
   background-color: #adadad;
+  width: 27%;
 }
 #pokemonId{
 border-top-right-radius: 10px;
@@ -105,7 +106,7 @@ height: 100%;
   position: absolute;
   margin-top: 15px;
   text-align: left;
-  width: 300px;
+  width: 17%;
   background-color: #adadad;
   top: 40%;
 }
@@ -140,19 +141,22 @@ p.StatDiv{
   text-align: center;
 }
 .StatDiv{
-  width: 450px;
+  width: 95%;
   border-bottom: solid 1px gray;
   font-size: .8em;
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
 }
+.StatDiv label{
+  width: 15%;
+}
 .StatBackgroud{
   float: right;
   vertical-align: bottom;
   display: inline-block;
   height: 10px;
-  width: 300px;
+  width: 72%;
   background-color: white;
   margin-left: 10px;
 }
