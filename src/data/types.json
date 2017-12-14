@@ -67,5 +67,74 @@
       {"type": "Steel", "effective": ".5"},
       {"type": "Fairy", "effective": ".5"}
     ]
+  },
+  {
+    "type": "Dragon",
+    "weakness": [
+      {"type": "Normal", "effective": "1"},
+      {"type": "Fire", "effective": ".5"},
+      {"type": "Water", "effective": ".5"},
+      {"type": "Electric", "effective": ".5"},
+      {"type": "Grass", "effective": ".5"},
+      {"type": "Ice", "effective": "2"},
+      {"type": "Fighting", "effective": "1"},
+      {"type": "Poison", "effective": "1"},
+      {"type": "Ground", "effective": "1"},
+      {"type": "Flying", "effective": "1"},
+      {"type": "Psychic", "effective": "1"},
+      {"type": "Bug", "effective": "1"},
+      {"type": "Rock", "effective": "1"},
+      {"type": "Ghost", "effective": "1"},
+      {"type": "Dragon", "effective": "2"},
+      {"type": "Dark", "effective": "1"},
+      {"type": "Steel", "effective": "1"},
+      {"type": "Fairy", "effective": "2"}
+    ]
+  },
+  {
+    "type": "Flying",
+    "weakness": [
+      {"type": "Normal", "effective": "1"},
+      {"type": "Fire", "effective": "1"},
+      {"type": "Water", "effective": "1"},
+      {"type": "Electric", "effective": "2"},
+      {"type": "Grass", "effective": ".5"},
+      {"type": "Ice", "effective": "2"},
+      {"type": "Fighting", "effective": ".5"},
+      {"type": "Poison", "effective": "1"},
+      {"type": "Ground", "effective": "0"},
+      {"type": "Flying", "effective": "1"},
+      {"type": "Psychic", "effective": "1"},
+      {"type": "Bug", "effective": ".5"},
+      {"type": "Rock", "effective": "2"},
+      {"type": "Ghost", "effective": "1"},
+      {"type": "Dragon", "effective": "1"},
+      {"type": "Dark", "effective": "1"},
+      {"type": "Steel", "effective": "1"},
+      {"type": "Fairy", "effective": "1"}
+    ]
+  },
+  {
+    "type": "Water",
+    "weakness": [
+      {"type": "Normal", "effective": "1"},
+      {"type": "Fire", "effective": ".5"},
+      {"type": "Water", "effective": ".5"},
+      {"type": "Electric", "effective": "2"},
+      {"type": "Grass", "effective": "2"},
+      {"type": "Ice", "effective": ".5"},
+      {"type": "Fighting", "effective": "1"},
+      {"type": "Poison", "effective": "1"},
+      {"type": "Ground", "effective": "1"},
+      {"type": "Flying", "effective": "1"},
+      {"type": "Psychic", "effective": "1"},
+      {"type": "Bug", "effective": "1"},
+      {"type": "Rock", "effective": "1"},
+      {"type": "Ghost", "effective": "1"},
+      {"type": "Dragon", "effective": "1"},
+      {"type": "Dark", "effective": "1"},
+      {"type": "Steel", "effective": ".5"},
+      {"type": "Fairy", "effective": "1"}
+    ]
   }
 ]
