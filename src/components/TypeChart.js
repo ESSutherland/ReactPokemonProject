@@ -26,10 +26,6 @@ export class TypeChart extends React.Component{
     });
     return effectiveList;
   }
-  toFract(number){
-    //var fract = new Fraction(number);
-    //return fract;
-  }
   render(){
     return(
        <table id="information">

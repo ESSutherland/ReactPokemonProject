@@ -15,15 +15,6 @@ export class EvolutionLine extends React.Component{
       return evolutionList;
     }
 
-    checkEvo(evo){
-      if(evo.method === ""){
-        return null;
-      }
-      else{
-        return <tr>---></tr>;
-      }
-      return null;
-    }
 
     render(){
       return(

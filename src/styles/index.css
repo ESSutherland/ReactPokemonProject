@@ -1,11 +1,9 @@
 #root{
   margin: auto auto;
-  position: absolute;
-  left: 3.5%;
   background-color: white;
-  padding: 30px;
-  height: 150%;
   width: 90%;
+  height: 100%;
+  padding-bottom: 50px;
 }
 body{
   background-color: #e27266;
@@ -21,7 +19,8 @@ body{
   width: 200px;
   border: black 2px solid;
   vertical-align: bottom;
-  left: 50px;
+  left: 20%;
+  overflow: hidden;
 }
 .Header{
   top: 0px;
@@ -39,41 +38,68 @@ body{
   font-size: 3em;
   border-bottom: solid 5px black;
 }
+#left{
+  width: 30%;
+  float: left;
+}
+#right{
+  width: 20%;
+  float: right;
+}
+#middle{
+  width: 40%;
+  float: left;
+}
 #pokemonData{
-  position: absolute;
-  top: 18%;
+  margin-top: 150px;
+  margin-left: 80px;
+  margin-bottom: 50px;
   text-align: center;
-  width: 17%;
-  height: 22%;
+  width: 300px;
   background-color: #adadad;
+  padding-bottom: 10px;
 }
 #information{
-  width: 10%;
-  position: absolute;
-  top: 18%;
-  left: 85%;
+  width: 100px;
   background-color: #b5461b;
   border: none;
+  margin-top: 150px;
+  float: right;
+  margin-right: 50px;
 }
 #information th, td {
     border: 1px solid black;
     border: none;
-    padding: 5px;
+    padding: 3%;
 }
 #information td{
   background-color: #adadad;
   text-align: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 8%;
+  padding-bottom: 8%;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
 }
-#stats{
-  position: absolute;
-  left: 55%;
-  top: 18%;
+#pokedex{
+  margin-top: 150px;
+  margin-left: 90px;
   background-color: #adadad;
-  width: 27%;
+  width: 550px;
+}
+#pokedex #entry{
+  padding: 10px;
+}
+#stats{
+  margin-left: 90px;
+  margin-top: 100px;
+  background-color: #adadad;
+  width: 550px;
+  margin-bottom: 100px;
+  padding-bottom: 5px;
+}
+#pokemonInfo{
+  width: 100%;
+  text-align: left;
 }
 #pokemonId{
 border-top-right-radius: 10px;
@@ -81,34 +107,38 @@ border-bottom-right-radius: 10px;
 border-right: solid black 3px;
 float: left;
 background-color: #b5461b;
-padding-left: 5px;
-padding-right: 8px;
-margin-right: 10px;
+padding-left: 2%;
+padding-right: 2%;
+margin-right: 2%;
 height: 100%;
 }
-#pokemonInfo{
+#pokemonName{
   background-color: #e27266;
   font-weight: bold;
   font-family: Arial Black, sans-serif;
-  margin-bottom: 15px;
-  height: 25px;
+  margin-bottom: 8%;
+  height: 15%;
 }
 #typing{
   background-color: #b5461b;
   font-size: .8em;
-  height: 30px;
+  height: 50%;
   text-align: center;
 }
 #forms{
+  margin-top: 10px;
   margin-left: 10px;
+  margin-bottom: 10px;
+}
+#formSelect{
+  border-bottom: solid 1px black;
 }
 #abilities{
-  position: absolute;
-  margin-top: 15px;
   text-align: left;
-  width: 17%;
+  width: 300px;
   background-color: #adadad;
-  top: 40%;
+  margin-left: 80px;
+  padding-bottom: 3px;
 }
 #abilities p{
   border-bottom: solid 1px gray;
@@ -116,15 +146,23 @@ height: 100%;
   padding: 5px;
 }
 #evolution{
+  width: 550px;
   background-color: #adadad;
-  position: absolute;
-  top: 60%;
-  left: 40%;
+  margin-left: 90px;
 }
 #home{
-  position: absolute;
-  top: 20%;
-  left: 25%
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 500px;
+}
+#spacer{
+  clear: both;
+}
+.EvoImage{
+  vertical-align: middle;
+  display: table-cell;
+  position: relative;
+  overflow: hidden;
 }
 .EvoImage img{
   margin: 15px;
@@ -177,6 +215,9 @@ p.StatDiv{
   text-align: center;
   background-color: #b5461b;
   width: 100%;
+  height: 20px;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 .Hidden{
   margin-left: 5px;
@@ -231,12 +272,12 @@ footer{
   padding-bottom: 5px;
   width: 100%;
   position: absolute;
-  bottom: -60%;
   left: 0px;
   text-align: center;
   background-color: #b5461b;
   border-top: solid black 2px;
   font-weight: bold;
+  clear: both;
 }
 .Grass{
   border-radius: 20px;

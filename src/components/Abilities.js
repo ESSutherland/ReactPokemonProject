@@ -20,7 +20,7 @@ export class Abilities extends React.Component{
   render(){
     return(
       <div id="abilities">
-      <div className="DataTitle">Abilities:</div>
+      <div className="DataTitle">Abilities</div>
         {this.listAbilities(this.props.data)}
       </div>
     )
